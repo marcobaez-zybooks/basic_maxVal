@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <title>Array Games</title>
+    </head>
+    <body>
+        <script src="logic.js"></script>
+        <div id="array-games">
+            <button id="start-button" onclick="start_button_pressed()">Start</button>         
+            <div id="array-container">
+                    <table id="array">
+                        <td id="item0">X</td>
+                        <td id="item1">X</td>
+                        <td id="item2">X</td>
+                        <td id="item3">X</td>
+                        <td id="item4">X</td>
+                        <td id="item5">X</td>
+                        <td id="item6">X</td>
+                    </table>
+                <div id="max-container">
+                    Max
+                    <table id="max-item">
+                        <td id="maxitem">X</td>
+                    </table>
+                </div>
+            </div>           
+            <div id="button-container">
+                <button id="next-button" aria-labelledby="array" onclick="next_button_pressed()" disabled>Next Value</button>
+                <button id="store-button" onclick="store_button_pressed()" disabled>Store Value</button>
+            </div>           
+            <div id="time-container">
+                Time: <div id="curr-time">0</div> S Best Time: <div id="best-time">0</div> S
+                <div id="break"></div>
+                <button id="clear-time-button" onclick="clear_best()" disabled>Clear Best</button>
+            </div>
+        </div>
+    </body>
+</html>

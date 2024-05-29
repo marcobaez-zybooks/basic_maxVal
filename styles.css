@@ -1,0 +1,51 @@
+body {
+    padding: 25px;
+    height: 150px;
+    width: 500px;
+    border: 1px solid black;
+}
+
+#array-container{
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    justify-content: center;
+}
+
+#button-container{
+    display: flex;
+    justify-content: end;
+}
+
+#array {
+    border-spacing: 1px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 2px;
+    color: white;
+    width: 15px;
+    text-align: center;
+}
+
+td.array-element-is-active{
+    color: black;
+}
+
+td.correct-largest{
+    border: 3px solid green;
+}
+
+td.incorrect-largest{
+    border: 3px solid red;
+}
+
+#time-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#break{
+    width: 100%;
+}
