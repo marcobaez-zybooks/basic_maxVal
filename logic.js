@@ -25,7 +25,7 @@ function start_button_pressed(){
         $("#start-button").html("Reset");
         $("#next-button").prop("disabled", false);
         $("#store-button").prop("disabled", false);
-
+        $("#start-button").attr("aria-label", "Current number in array: "+ numArray[0]);
         for (let i=0; i<elementsInArray; i++){
             $("#item"+i).html(numArray[i]);
         }
@@ -64,6 +64,8 @@ function next_button_pressed(){
         if($("#maxitem").html()==maxNumInArray){
             $("#item"+maxNumIndex).addClass("correct-largest");
             update_best_time();
+            $("#next-button").attr("aria-label", "Correct max value "+ numArray[maxNumIndex] + " found.");
+            $("#start-button").attr("aria-label", "Reset Button")
         }
         else{
             $("#item"+maxNumIndex).addClass("incorrect-largest");
@@ -76,6 +78,7 @@ function next_button_pressed(){
         if($("#item"+i).hasClass("array-element-is-active")){
             $("#item"+i).removeClass("array-element-is-active");
             $("#item"+(i+1)).addClass("array-element-is-active");
+            $("#next-button").attr("aria-label", "Next Value Button. Current number in array: "+ numArray[i+1]);
             break;
         }
     }
@@ -86,6 +89,7 @@ function store_button_pressed(){
         if($("#item"+i).hasClass("array-element-is-active")){
             $("#maxitem").addClass("array-element-is-active");
             $("#maxitem").html($("#item"+i).html());
+            $("#store-button").attr("aria-label", "Max Value "+ numArray[i] + " stored.");
             break;
         }
     }
